@@ -3,11 +3,11 @@ import os, zipfile, subprocess, signal, shutil, json, sys, uuid, datetime, threa
 from functools import wraps
 
 app = Flask(__name__)
-app.secret_key = "BLACK_ADMIN_3D_HOSTING_2026"
+app.secret_key = "BISHAL_ADMIN_3D_HOSTING_2026"
 
-# --- Master Admin Credentials ---
-ADMIN_USERNAME = "BLACK"
-ADMIN_PASSWORD = "BLACK_777"
+# --- BISHAL Admin Credentials ---
+ADMIN_USERNAME = "BISHAL"
+ADMIN_PASSWORD = "BISHAL_777"
 
 UPLOAD_FOLDER = "uploads"
 USER_DATA_FILE = "users.json"
@@ -757,7 +757,7 @@ LANDING_TEMPLATE = '''
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLACK ADMIN HOSTING PANEL</title>
+    <title>BISHAL ADMIN HOSTING PANEL</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -977,7 +977,7 @@ LANDING_TEMPLATE = '''
 </head>
 <body>
     <nav>
-        <div class="logo">⚡ BLACK ADMIN</div>
+        <div class="logo">⚡ BISHAL ADMIN</div>
         <div class="nav-links">
             <a href="#pricing">Pricing</a>
             <a href="/login" class="login-btn">Login</a>
@@ -1032,7 +1032,11 @@ LANDING_TEMPLATE = '''
     </section>
 
     <footer>
-        <p>&copy; 2026 BLACK ADMIN HOSTING PANEL. All rights reserved.</p>
+        <p>&copy; 2026 BISHAL ADMIN HOSTING PANEL. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="https://t.me/bishalyrx" style="color: #00ffcc; text-decoration: none;">Join Channel</a> | 
+            Owner: <a href="https://t.me/BISHALGMR" style="color: #00ffcc; text-decoration: none;">@BISHALGMR</a>
+        </p>
     </footer>
 </body>
 </html>
@@ -1042,7 +1046,7 @@ LOGIN_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BLACK ADMIN HOSTING - Login</title>
+    <title>BISHAL ADMIN HOSTING - Login</title>
     <style>
         body {
             background: #050505;
@@ -1101,7 +1105,7 @@ LOGIN_TEMPLATE = '''
 </head>
 <body>
     <div class="container">
-        <h2 style="color:#00ffcc; text-shadow: 0 0 10px #00ffcc;">BLACK ADMIN HOSTING PANEL</h2>
+        <h2 style="color:#00ffcc; text-shadow: 0 0 10px #00ffcc;">BISHAL ADMIN HOSTING PANEL</h2>
         {% if error %}
         <div class="error">{{ error }}</div>
         {% endif %}
@@ -1122,7 +1126,7 @@ DASHBOARD_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard - BLACK ADMIN</title>
+    <title>Dashboard - BISHAL ADMIN</title>
     <style>
         body {
             background: #0a0a0a;
@@ -1268,7 +1272,7 @@ DASHBOARD_TEMPLATE = '''
 </head>
 <body>
     <div class="header">
-        <div class="logo">⚡ BLACK ADMIN</div>
+        <div class="logo">⚡ BISHAL ADMIN</div>
         <div>
             <span class="plan-badge">{{ current_plan.name }} PLAN</span>
             <span style="margin-left: 20px; color: #666;">{{ session.username }}</span>
@@ -1727,7 +1731,7 @@ PRICING_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pricing - BLACK ADMIN</title>
+    <title>Pricing - BISHAL ADMIN</title>
     <style>
         body {
             background: #0a0a0a;
@@ -1831,7 +1835,7 @@ PRICING_TEMPLATE = '''
 </head>
 <body>
     <div class="header">
-        <div class="logo">⚡ BLACK ADMIN</div>
+        <div class="logo">⚡ BISHAL ADMIN</div>
         <h1 style="margin-top: 20px;">Upgrade Your Plan</h1>
         <p style="color: #666;">Choose the perfect plan for your needs</p>
     </div>
@@ -1874,7 +1878,7 @@ ADMIN_LOGIN_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Login - BLACK ADMIN</title>
+    <title>Admin Login - BISHAL ADMIN</title>
     <style>
         body {
             background: #050505;
@@ -1929,8 +1933,8 @@ ADMIN_LOGIN_TEMPLATE = '''
 </head>
 <body>
     <div class="glow-box">
-        <h1 style="text-shadow: 0 0 15px #00d4ff;">🛡️ MASTER CONTROL</h1>
-        <p style="color: #888; margin-bottom: 30px;">BLACK ADMIN HOSTING</p>
+        <h1 style="text-shadow: 0 0 15px #00d4ff;">🛡️ BISHAL CONTROL</h1>
+        <p style="color: #888; margin-bottom: 30px;">BISHAL ADMIN HOSTING</p>
         
         {% if error %}
         <div class="error">{{ error }}</div>
@@ -1950,7 +1954,7 @@ ADMIN_DASHBOARD_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Dashboard - BLACK ADMIN</title>
+    <title>Admin Dashboard - BISHAL ADMIN</title>
     <style>
         body {
             background: #0a0a0a;
@@ -2062,9 +2066,9 @@ ADMIN_DASHBOARD_TEMPLATE = '''
 </head>
 <body>
     <div class="header">
-        <div class="logo">🛡️ BLACK ADMIN PANEL</div>
+        <div class="logo">🛡️ BISHAL ADMIN PANEL</div>
         <div class="nav">
-            <span style="color: #666;">Master Admin</span>
+            <span style="color: #666;">BISHAL Admin</span>
             <a href="/logout">Logout</a>
         </div>
     </div>
@@ -2136,7 +2140,7 @@ ADMIN_PLANS_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Manage Plans - BLACK ADMIN</title>
+    <title>Manage Plans - BISHAL ADMIN</title>
     <style>
         body {
             background: #0a0a0a;
@@ -2341,7 +2345,7 @@ ADMIN_USERS_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Users - BLACK ADMIN</title>
+    <title>Users - BISHAL ADMIN</title>
     <style>
         body {
             background: #0a0a0a;
@@ -2445,7 +2449,7 @@ ADMIN_PAYMENTS_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Payments - BLACK ADMIN</title>
+    <title>Payments - BISHAL ADMIN</title>
     <style>
         body {
             background: #0a0a0a;
